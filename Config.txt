@@ -1,0 +1,55 @@
+# Configuration file for conveting WAO data to nc
+# Required by CVAO_v2.0.py
+# Develped by Barbara Brooks <barbara.brooks@ncas.ac.uk>
+# 08/2021
+# Each input on a separate line
+
+# file version <a.b.c>
+#	a: major revision
+#	b: minor revision
+#	c: patch
+# duration <year, month, day>
+#	This sets the durations of the files
+# start date <DD, MM, YYYY>
+#	If duration is year the file will contain all data for the year in the start date
+#   If duration is month the file will contain all data for the month in the start date
+#   If duration is day the file will contain all data for the day in the start date	
+# instrument_name <eg ncas-dc-gc-fid-4>
+# data product <eg voc-concentration>
+# path to data file <full_path>
+# standard version <1.1 or 2.0>
+
+#usage notes
+#	If you wanted to produce a year file for a specific year then set
+#		duration to year
+#		start date to 01, 01, <year of interest>
+#	If you wanted to produce a monthly file for a specific month then set
+#		duration to month
+#		start date to 01, <month of interest>, <year of interest>
+#	If you wanted to produce a daily file for a specific day then set
+#		duration to day
+#		start date to <day of interest>, <month of interest>, <year of interest> 
+#	If you wanted to produce yearly files for all years in data file
+#		duration to year
+#		start date to all
+#	If you wanted to produce monthly files for all months in data file
+#		duration to month
+#		start date to all
+#	If you wanted to produce daily files for all days in data file
+#		duration to day
+#		start date to all
+
+# Settings below will create a single file for 2016
+
+##### Start - do not remove #####
+0.0.0
+year
+01,01,2016
+ncas-dc-gc-fid-4
+voc-concentration
+C:\Users\lecbjb\Desktop\WORK\CODE\Python\CVAO\testdata\cv-dc-gc-fid-3_capeverde_20160101.txt
+2.0
+##### End - do not remove #####
+
+##### Possible combos ##### 
+ncas-dc-gc-fid-4, voc-concentration, C:\Users\lecbjb\Desktop\WORK\CODE\Python\CVAO\testdata\cv-dc-gc-fid-3_capeverde_20160101.txt
